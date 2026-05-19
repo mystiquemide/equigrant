@@ -16,7 +16,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Install contract tooling
-        run: pip install genlayer genvm-lint pytest
+        run: pip install genlayer genlayer-py genlayer-test genvm-linter pytest
       - name: Lint contracts
         run: genvm-lint check contracts/equigrant.py --json
       - name: Run direct tests
