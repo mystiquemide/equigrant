@@ -20,7 +20,7 @@ jobs:
       - name: Lint contracts
         run: genvm-lint check contracts/equigrant.py --json
       - name: Run direct tests
-        run: pytest tests/direct -v -s --capture=no
+        run: pytest tests/direct -v -s --capture=no -p no:cacheprovider
 
   build-frontend:
     name: Build Frontend
