@@ -91,7 +91,7 @@ All core application state lives on GenLayer. The frontend reads from the deploy
 ## Quick Start
 
 ```bash
-git clone https://github.com/<your-username>/equigrant.git
+git clone https://github.com/mystiquemide/equigrant.git
 cd equigrant
 
 npm --prefix frontend ci
@@ -119,6 +119,7 @@ WalletConnect can stay empty for browser wallet testing. Add a Reown project id 
 
 ```bash
 npm run dev
+npm run lint
 npm run build
 npm run type-check
 npm run lint:contracts
@@ -167,4 +168,16 @@ equigrant/
 
 ## License
 
-MIT
+MIT. See [LICENSE](LICENSE).
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for local setup, verification, branch naming, and contract contribution rules.
+
+## Security
+
+See [SECURITY.md](SECURITY.md) for vulnerability reporting and pre-deploy security checks.
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for release notes.

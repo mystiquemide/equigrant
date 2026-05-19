@@ -8,7 +8,7 @@ EquiGrant is a GenLayer-first application. Contracts are Python intelligent cont
 npm --prefix frontend ci
 python -m venv .venv
 source .venv/bin/activate
-pip install genlayer genvm-lint pytest
+pip install genlayer genlayer-py genlayer-test genvm-linter pytest
 ```
 
 ## Development
