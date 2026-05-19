@@ -1,0 +1,19 @@
+{
+  "name": "equigrant",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AI-governed grant platform on GenLayer.",
+  "scripts": {
+    "dev": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "start": "npm --prefix frontend run start",
+    "type-check": "npm --prefix frontend run type-check",
+    "lint:contracts": "PATH=.venv/bin:$PATH genvm-lint check contracts/equigrant.py --json",
+    "test:direct": "PATH=.venv/bin:$PATH pytest tests/direct -v -s --capture=no",
+    "verify": "npm run lint:contracts && npm run test:direct && npm run build && npm run type-check"
+  },
+  "engines": {
+    "node": ">=18.20",
+    "npm": ">=10"
+  }
+}

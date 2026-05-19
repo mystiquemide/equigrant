@@ -1,0 +1,62 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+.venv/
+venv/
+
+# Next.js
+.next/
+frontend/.next/
+out/
+frontend/out/
+
+# Build and cache output
+artifacts/
+.pytest_cache/
+.turbo/
+coverage/
+*.tsbuildinfo
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Environment files
+.env
+.env.*
+!.env.example
+!frontend/.env.example
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS and editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Local agent/runtime state
+.agents/
+.codex/
+memory.md
+AGENTS.md
+
+# Internal planning docs
+docs/ANALYTICS.md
+docs/ARCHITECTURE.md
+docs/DESIGN.md
+docs/PRD.md
+docs/QA_REPORT.md
+docs/TASKS.md
+
+# Temporary deploy output
+*.bak
+*.tmp
