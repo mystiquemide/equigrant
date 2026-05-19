@@ -12,6 +12,10 @@ STD_LIB_PATH = Path(
 
 @pytest.fixture(autouse=True)
 def use_extracted_genlayer_stdlib():
+    if not STD_LIB_PATH.exists():
+        yield
+        return
+
     path = str(STD_LIB_PATH)
     if path in sys.path:
         sys.path.remove(path)
