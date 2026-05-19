@@ -1,5 +1,7 @@
 import json
 
+from helpers import address_text
+
 
 CONTRACT = "contracts/equigrant.py"
 FUTURE_DEADLINE = "2027-12-31T23:59:59Z"
@@ -112,7 +114,7 @@ def test_appeal_flow_for_failed_submission(direct_deploy, direct_vm, direct_alic
 
     appeal = contract.get_appeal(bounty_id, submission_id)
     assert appeal["status"] == "pending"
-    assert appeal["appellant"] == str(direct_bob)
+    assert appeal["appellant"].lower() == address_text(direct_bob).lower()
 
 
 def test_plagiarism_forces_failure(direct_deploy, direct_vm, direct_alice, direct_bob):

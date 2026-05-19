@@ -1,6 +1,8 @@
 CONTRACT = "contracts/equigrant.py"
 FUTURE_DEADLINE = "2027-12-31T23:59:59Z"
 
+from helpers import address_text
+
 
 def create_bounty(contract):
     return contract.create_bounty(
@@ -29,7 +31,7 @@ def test_submit_valid(direct_deploy, direct_vm, direct_alice, direct_bob):
     assert submission_id == "submission_0"
     assert len(submissions) == 1
     assert submissions[0]["status"] == "submitted"
-    assert submissions[0]["submitter"] == str(direct_bob)
+    assert submissions[0]["submitter"].lower() == address_text(direct_bob).lower()
 
 
 def test_submit_rejects_empty_github_urls(direct_deploy, direct_vm, direct_alice, direct_bob):
@@ -112,6 +114,6 @@ def test_get_submitter_submissions(direct_deploy, direct_vm, direct_alice, direc
         "A well-built submission with enough detail for consideration.",
     )
 
-    submissions = contract.get_submitter_submissions(str(direct_bob).lower())
+    submissions = contract.get_submitter_submissions(address_text(direct_bob).lower())
     assert len(submissions) == 1
     assert submissions[0]["bounty_id"] == bounty_id

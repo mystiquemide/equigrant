@@ -1,12 +1,15 @@
 CONTRACT = "contracts/equigrant.py"
 FUTURE_DEADLINE = "2027-12-31T23:59:59Z"
 
+from helpers import address_text
+
 
 def deploy(direct_deploy):
     return direct_deploy(CONTRACT)
 
 
-def test_create_bounty_valid(direct_deploy, direct_alice):
+def test_create_bounty_valid(direct_deploy, direct_vm, direct_alice):
+    direct_vm.sender = direct_alice
     contract = deploy(direct_deploy)
     bounty_id = contract.create_bounty(
         "Build an open-source analytics dashboard for Web3 grant teams",
@@ -19,7 +22,7 @@ def test_create_bounty_valid(direct_deploy, direct_alice):
 
     assert bounty_id == "bounty_0"
     assert bounty["status"] == "active"
-    assert bounty["creator"] == str(direct_alice) or bounty["creator"]
+    assert bounty["creator"].lower() == address_text(direct_alice).lower()
     assert bounty["reward_pool"] == "5000"
     assert bounty["remaining_pool"] == "5000"
     assert bounty["min_stake"] == "10"
@@ -75,7 +78,7 @@ def test_get_active_bounties_and_creator_filter(direct_deploy, direct_vm, direct
     )
 
     active = contract.get_active_bounties()
-    creator_bounties = contract.get_creator_bounties(str(direct_alice).lower())
+    creator_bounties = contract.get_creator_bounties(address_text(direct_alice).lower())
 
     assert len(active) == 2
     assert len(creator_bounties) == 2
@@ -97,7 +100,7 @@ def test_delete_bounty_hides_from_active_list(direct_deploy, direct_vm, direct_a
 
     bounty = contract.get_bounty(bounty_id)
     active = contract.get_active_bounties()
-    creator_bounties = contract.get_creator_bounties(str(direct_alice).lower())
+    creator_bounties = contract.get_creator_bounties(address_text(direct_alice).lower())
 
     assert bounty["status"] == "deleted"
     assert active == []
