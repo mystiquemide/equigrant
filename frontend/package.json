@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@rainbow-me/rainbowkit": "^2.2.10",
-    "@tanstack/react-query": "^5.50.0",
+    "@tanstack/react-query": "^5.100.11",
     "framer-motion": "^12.38.0",
     "genlayer-js": "latest",
     "lucide-react": "^1.14.0",
