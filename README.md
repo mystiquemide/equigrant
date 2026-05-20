@@ -25,7 +25,7 @@
 
 EquiGrant is a production-grade MVP for AI-governed grants and bounties. Grant creators publish natural-language evaluation criteria and fund opportunities with GEN. Builders submit GitHub repositories, demo URLs, and project descriptions. GenLayer validators evaluate submissions through AI consensus and store the full lifecycle onchain.
 
-The product is designed for real grant operations: creator dashboards, submitter dashboards, public bounty discovery, AI scoring, auditability, lifecycle controls, and a premium Web3 frontend.
+The product is designed for real grant operations: creator dashboards, submitter dashboards, public bounty discovery, AI scoring, auditability, and lifecycle controls.
 
 ## Product Screens
 
