@@ -151,15 +151,15 @@ export function Navbar() {
         <Link href="/" className="group flex min-w-0 items-center gap-3">
           <motion.span
             whileHover={{ scale: 1.04, filter: "drop-shadow(0 0 14px rgba(188,162,255,0.45))" }}
-            className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-white p-2"
+            className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-md"
           >
             <span className="absolute inset-0 rounded-md opacity-0 ring-2 ring-[#BCA2FF]/70 transition group-hover:opacity-100" />
             <Image
-              src="/genlayer-mark-black.svg"
-              alt="GenLayer"
-              width={24}
-              height={24}
-              className="h-6 w-6 object-contain"
+              src="/equigrant-mark.svg"
+              alt="EquiGrant"
+              width={40}
+              height={40}
+              className="h-10 w-10 object-contain"
               priority
             />
           </motion.span>

@@ -79,19 +79,11 @@ export function Hero() {
             className="mb-8 inline-flex items-center gap-3 rounded-full border border-black/10 bg-white px-4 py-2 shadow-lg shadow-black/5 dark:border-white/10 dark:bg-white/[0.06]"
           >
             <Image
-              src="/genlayer-mark-black.svg"
-              alt="GenLayer"
-              width={18}
-              height={18}
-              className="h-[18px] w-[18px] object-contain dark:hidden"
-              priority
-            />
-            <Image
-              src="/genlayer-mark-white.svg"
-              alt="GenLayer"
-              width={18}
-              height={18}
-              className="hidden h-[18px] w-[18px] object-contain dark:block"
+              src="/equigrant-mark.svg"
+              alt="EquiGrant"
+              width={22}
+              height={22}
+              className="h-[22px] w-[22px] object-contain"
               priority
             />
             <span className="text-sm font-semibold text-black/70 dark:text-white/70">

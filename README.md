@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="frontend/public/genlayer-logo.svg" alt="GenLayer" width="180" />
+  <img src="frontend/public/equigrant-mark.svg" alt="EquiGrant" width="120" />
 </p>
 
 <h1 align="center">EquiGrant</h1>

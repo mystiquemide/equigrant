@@ -24,20 +24,13 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
           <div className="flex items-center gap-3">
-            <span className="flex h-10 w-10 items-center justify-center rounded-md bg-black p-2 dark:bg-white">
+            <span className="flex h-10 w-10 items-center justify-center rounded-md">
               <Image
-                src="/genlayer-mark-white.svg"
-                alt="GenLayer"
-                width={24}
-                height={24}
-                className="h-6 w-6 object-contain dark:hidden"
-              />
-              <Image
-                src="/genlayer-mark-black.svg"
-                alt="GenLayer"
-                width={24}
-                height={24}
-                className="hidden h-6 w-6 object-contain dark:block"
+                src="/equigrant-mark.svg"
+                alt="EquiGrant"
+                width={40}
+                height={40}
+                className="h-10 w-10 object-contain"
               />
             </span>
             <div>
