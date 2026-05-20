@@ -60,3 +60,4 @@ docs/TASKS.md
 # Temporary deploy output
 *.bak
 *.tmp
+.vercel/

@@ -48,7 +48,7 @@ Recommended settings when importing from GitHub:
 | Build command | `npm run build` |
 | Output directory | `.next` |
 
-The root `vercel.json` also supports deployment from the repository root.
+The Vercel project is configured with `frontend` as the root directory. Keep Vercel-specific build settings in [frontend/vercel.json](../frontend/vercel.json), where commands are relative to `frontend`.
 
 ## Local Verification Before Deploy
 
@@ -73,11 +73,10 @@ npm run verify
 ```bash
 npm i -g vercel
 vercel login
-vercel
-vercel --prod
+vercel deploy --prod
 ```
 
-When prompted, use `frontend` as the project root unless deploying with the root `vercel.json`.
+When prompted, use `frontend` as the project root. The linked project should report `mystiquemides-projects/equigrant`.
 
 ## GitHub Push
 
@@ -103,7 +102,7 @@ Then import the GitHub repository in Vercel.
 
 ### Build fails on Vercel
 
-Confirm the Vercel root directory is `frontend` when using framework auto-detection, or deploy from the repository root with the included `vercel.json`.
+Confirm the Vercel root directory is `frontend` and that [frontend/vercel.json](../frontend/vercel.json) uses commands relative to that directory.
 
 ### Wallet connection does not show QR or mobile options
 
