@@ -9,7 +9,7 @@
     "start": "npm --prefix frontend run start",
     "lint": "npm --prefix frontend run lint",
     "type-check": "npm --prefix frontend run type-check",
-    "lint:contracts": "PATH=.venv/bin:$PATH genvm-lint check contracts/equigrant.py --json",
+    "lint:contracts": "PATH=.venv/bin:$PATH genvm-lint lint contracts/equigrant.py --json",
     "test:direct": "PATH=.venv/bin:$PATH pytest tests/direct -v -s --capture=no -p no:cacheprovider",
     "verify": "npm run lint && npm run lint:contracts && npm run test:direct && npm run build && npm run type-check"
   },
