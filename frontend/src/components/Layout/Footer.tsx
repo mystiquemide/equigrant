@@ -24,13 +24,13 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
           <div className="flex items-center gap-3">
-            <span className="flex h-10 w-10 items-center justify-center rounded-md">
+            <span className="flex h-10 w-10 items-center justify-center rounded-md bg-[#ede9e3] p-1">
               <Image
                 src="/equigrant-mark.svg"
                 alt="EquiGrant"
                 width={40}
                 height={40}
-                className="h-10 w-10 object-contain"
+                className="h-8 w-8 object-contain"
               />
             </span>
             <div>
